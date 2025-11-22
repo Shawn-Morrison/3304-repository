@@ -113,7 +113,7 @@ code {
   top: 0;
   left: 0;
   right: 0;
-  background-color: #333333;
+  background-color: #ff00b3;
   padding: 0 32px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -134,13 +134,14 @@ code {
 .nav-horizontal a {
   display: block;
   padding: 16px 0;
-  color: #ffffff;
+  color: #fefdfd;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .nav-horizontal a:hover {
-  color: #0066CC;
+  color: #000000;
+  background-color: #01430f;
 }
 
 .nav-horizontal+main {
