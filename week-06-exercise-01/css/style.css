@@ -147,15 +147,41 @@ code {
   margin-top: 80px;
 }
 
-.nav-custom {}
+.nav-custom {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  bottom: 32px;
+  right: 32px;
+  background-color: #232323;
+  padding: 16px 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
 
-.nav-custom ul {}
+.nav-custom ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-.nav-custom li {}
+.nav-custom li {
+  display: inline;
+  margin: 0 20px;
+}
 
-.nav-custom a {}
-
-.nav-custom a:hover {}
+.nav-custom a {
+  display: inline-block;
+  padding: 0 8px;
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 16px;
+}
+.nav-custom a:hover {
+  background-color: #01430f;
+  color: #fff;              
+}
 
 @media (width >=480px) {}
 
