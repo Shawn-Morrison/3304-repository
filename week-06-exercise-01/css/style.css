@@ -90,6 +90,8 @@ code {
 }
 
 .nav-simple a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
   display: block;
   padding: 8px 16px;
   color: #0066CC;
