@@ -233,8 +233,8 @@ footer a:hover {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
   background: white;
   opacity: 0;
   pointer-events: none;
@@ -268,18 +268,18 @@ footer a:hover {
 
 /* Flash animation */
 @keyframes flash {
-  0% { opacity: 1; }
-  50% { opacity: 0.8; }
-  100% { opacity: 0; }
+  0% { background: white; }
+  50% { background: yellow; }
+  100% { background: white; }
 }
+
 
 /* Shake animation */
 @keyframes shake {
-  0%   { transform: translate(0); }
-  25%  { transform: translate(5px, -5px); }
-  50%  { transform: translate(-5px, 5px); }
-  75%  { transform: translate(5px, 5px); }
-  100% { transform: translate(0); }
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+
 }
 
 @media (width >= 480px) {
