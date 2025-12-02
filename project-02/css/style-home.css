@@ -221,6 +221,66 @@ footer a:hover {
   color: rgb(255, 128, 37);
 }
 
+/* Button styling */
+.dont-click-button {
+  cursor: pointer;
+  color: red;
+  font-weight: bold;
+}
+
+/* Explosion overlay */
+#css-explosion-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: opacity 0.15s ease-out;
+}
+
+/* Big centered Oops! */
+.oops-text {
+  font-size: 6rem;
+  font-weight: bold;
+  color: black;
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+/* Trigger flash + show Oops! */
+#explode-toggle:checked ~ #css-explosion-overlay {
+  opacity: 1;
+  animation: flash 0.5s ease-out forwards, shake 0.5s ease-out;
+}
+
+#explode-toggle:checked ~ #css-explosion-overlay .oops-text {
+  opacity: 1;
+}
+
+/* Flash animation */
+@keyframes flash {
+  0% { opacity: 1; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0; }
+}
+
+/* Shake animation */
+@keyframes shake {
+  0%   { transform: translate(0); }
+  25%  { transform: translate(5px, -5px); }
+  50%  { transform: translate(-5px, 5px); }
+  75%  { transform: translate(5px, 5px); }
+  100% { transform: translate(0); }
+}
 
 @media (width >= 480px) {
   .collection-grid a {
