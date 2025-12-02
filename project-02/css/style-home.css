@@ -258,20 +258,29 @@ footer a:hover {
 
 /* Trigger flash + show Oops! */
 #explode-toggle:checked ~ #css-explosion-overlay {
-  opacity: 1;
-  animation: flash 0.5s ease-out forwards, shake 0.5s ease-out;
+  animation: flash 1s ease-out forwards;
 }
 
 #explode-toggle:checked ~ #css-explosion-overlay .oops-text {
-  opacity: 1;
+  animation: textflash 1s ease-out forwards;
 }
 
-/* Flash animation */
+/* Overlay animation */
 @keyframes flash {
-  0% { background: white; }
-  50% { background: yellow; }
-  100% { background: white; }
+  0%   { opacity: 0; }
+  20%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { opacity: 0; }
 }
+
+/* Text animation */
+@keyframes textflash {
+  0%   { opacity: 0; }
+  30%  { opacity: 1; }
+  70%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
 
 
 /* Shake animation */
